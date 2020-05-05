@@ -12,14 +12,6 @@
     <title>{% block title %}{% endblock %}</title>
   </head>
   <body>
-    <div class="content">
-      {% with message = get_flashed_messages(with_categories=true) %}
-        {% if message %}
-          {% for category, message in message %} 
-            {{ message }}
-          {% endfor %} 
-        {% endif %} 
-      {% endwith %}
     </div>
     <header>
       {% block header %}{% endblock %}

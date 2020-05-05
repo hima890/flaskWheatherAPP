@@ -2,6 +2,13 @@
 {% extends "layout.htm" %}
 {% block main %}
     <div class="content  content-section">
+        <div class="content">
+            <div class="alert alert-warning">
+              {% for message in get_flashed_messages() %} 
+              <strong>{{ message }} !</strong>
+              {% endfor %}
+            </div>
+        </div>      
         <h1>Oops. Page Not Found (404)</h1>
         <p>That page does not exist. Please try a different location</p>
     </div>
