@@ -6,7 +6,6 @@ app = Flask(__name__)
 app.secret_key = 'the random string'
 
 @app.route('/', methods=['POST', 'GET'])
-@app.route('/weatherInfo', methods=["POST", "GET"])
 def searsh():
    if request.method == "POST":
       try:
@@ -63,4 +62,4 @@ def page_not_fond(e):
 
 
 if __name__ == '__main__':
-   app.run(debug=True)
+   app.run()
