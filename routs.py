@@ -1,7 +1,9 @@
-from flask import render_template, request, url_for, redirect, flash
-from watherAPP_main import app
+from flask import render_template, request, url_for, redirect, flash, Flask
 import requests
 
+
+app = Flask(__name__)
+app.secret_key = 'the random string'
 
 @app.route('/', methods=['POST', 'GET'])
 @app.route('/weatherInfo', methods=["POST", "GET"])
@@ -57,3 +59,8 @@ def page_not_fond(e):
 @app.errorhandler(403)
 def page_not_fond(e):
     return render_template("403.htm"), 403
+
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
