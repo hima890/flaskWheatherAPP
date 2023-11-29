@@ -15,7 +15,6 @@ def searsh():
          else:
             url = "http://api.openweathermap.org/data/2.5/weather?q=khartoum&appid=51f137b0f0e24042f88fc1883e5eaed0"
          r = requests.get(url).json()
-         print(r)
          weather_data = []
          K = r['main']['temp']-273
          C = round(K, 2)
